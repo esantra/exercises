@@ -29,9 +29,9 @@ end
 
 
 2.	1 ... 5263
-	2 ...1053
+	2 ... 1053
 	3 ... 280
-NEED PART 4!
+        4 ... 1604
 
 3. An ant is walking on the squares of a 5x5 grid - it starts in the center square.
 
@@ -50,4 +50,4 @@ What is the probability that the ant is on the center square after 15 seconds?
 approx. 0.04124928 
 
 What is the probability that the ant is on one of the outermost squares after 1 hour?
-approx. 16/25
+approx. 16/25 

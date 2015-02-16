@@ -1,5 +1,4 @@
 <?php
-
 $s = array();
 $counter = 0;
 $counter2 = 0;
@@ -56,37 +55,22 @@ foreach ($s as &$value) {
 
 echo '3 ... ' . $counter3;
 //How many numbers in S can be multiplied by some other number in S to produce a//third number in S?
-foreach ($s as &$value) {
 
-	foreach ($s as &$value2) {
-
-		foreach ($s as &$value3) { 
-			if(multiply($value2, $value3)== $value){
-			    echo "value 2 " . $value2 . " value 3 " . $value3 . ' = ' . $value, PHP_EOL;
+foreach ($s as &$value3) { 
+	$copys = $s;
+	foreach($copys as &$value2){
+	$product = $value3 * $value2;
+			if(($product%19==0) && ($product < 100000)) {
+			    echo "value2 " . $value2 . " value3  " . $value3  . PHP_EOL;
                         $counter4++;
                   
 			}//end if 
-		
-		}//end foreach
-
-	}//end foreach
-
+	}//end for each
 }//end foreach
 
-function multiply($x, $y)
-{
-   /* 0  multiplied with anything gives 0 */
-   if($y == 0)
-     return 0;
- 
-   /* Add x one by one */
-   if($y > 0 )
-     return ($x + multiply($x, $y-1));
-  
-  /* the case where y is negative */
-   if($y < 0 )
-     return -multiply($x, -$y);
-}
+
 
 
 echo '4 ... '.$counter4;
+
+
